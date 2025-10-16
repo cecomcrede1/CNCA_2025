@@ -2,7 +2,7 @@
 # PAINEL DE RESULTADOS CECOM CREDE 01 2025 - VERSÃO MELHORADA
 # --------------------------------------------------------------------------
 
-import streamlit as st
+import streamlit as st<h3>📊 Indicadores Consolidados</h3>
 import pandas as pd
 import requests
 import plotly.express as px
@@ -778,35 +778,6 @@ class PainelResultados:
                 os principais dados das avaliações externas realizadas em nossa regional.
             </p>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                <div class="metric-card">
-                    <h3>📊 Indicadores Consolidados</h3>
-                    <p>Dados organizados por município e escola para análise comparativa e acompanhamento de resultados.</p>
-                </div>
-                
-                <div class="metric-card">
-                    <h3>📈 Evolução das Aprendizagens</h3>
-                    <p>Acompanhe a evolução dos níveis de proficiência ao longo dos ciclos de avaliação.</p>
-                </div>
-                
-                <div class="metric-card">
-                    <h3>🎯 Análise por Habilidades</h3>
-                    <p>Identifique pontos fortes e áreas que necessitam de atenção pedagógica específica.</p>
-                </div>
-                
-                <div class="metric-card">
-                    <h3>📋 Relatórios Detalhados</h3>
-                    <p>Visualizações interativas que apoiam o planejamento e a tomada de decisões pedagógicas.</p>
-                </div>
-            </div>
-            
-            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 2rem; border-radius: 10px; margin-top: 2rem; border-left: 4px solid #0ea5e9;">
-                <h3 style="color: #0c4a6e; margin-top: 0;">💡 Nossa Missão</h3>
-                <p style="color: #0369a1; margin-bottom: 0; font-size: 1.1rem; line-height: 1.6;">
-                    Aproximar os dados da prática pedagógica, fortalecendo o trabalho coletivo de gestores, 
-                    professores e equipes escolares, em prol da melhoria da aprendizagem de nossos estudantes.
-                </p>
-            </div>
         </div>
         """, unsafe_allow_html=True)
         
