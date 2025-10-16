@@ -2,7 +2,7 @@
 # PAINEL DE RESULTADOS CECOM CREDE 01 2025 - VERSÃO MELHORADA
 # --------------------------------------------------------------------------
 
-import streamlit as st<h3>📊 Indicadores Consolidados</h3>
+import streamlit as st
 import pandas as pd
 import requests
 import plotly.express as px
@@ -492,7 +492,7 @@ class GerenciadorAuth:
             codigo_input = st.text_input(
                 "Código do Município ou Escola", 
                 placeholder="Digite seu código",
-                help="Informe o código de 8 dígitos do município ou escola"
+                help="Informe o código de 8 dígitos do município (IBGE) ou escola (INEP)"
             )
             senha_input = st.text_input(
                 "Senha", 
@@ -777,7 +777,50 @@ class PainelResultados:
                 Este sistema foi desenvolvido para disponibilizar, de forma clara e acessível, 
                 os principais dados das avaliações externas realizadas em nossa regional.
             </p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Cards de funcionalidades usando Streamlit nativo
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            <div class="metric-card">
+                <h3>📊 Indicadores Consolidados</h3>
+                <p>Dados organizados por município e escola para análise comparativa e acompanhamento de resultados.</p>
+            </div>
+            """, unsafe_allow_html=True)
             
+            st.markdown("""
+            <div class="metric-card">
+                <h3>📈 Evolução das Aprendizagens</h3>
+                <p>Acompanhe a evolução dos níveis de proficiência ao longo dos ciclos de avaliação.</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col2:
+            st.markdown("""
+            <div class="metric-card">
+                <h3>🎯 Análise por Habilidades</h3>
+                <p>Identifique pontos fortes e áreas que necessitam de atenção pedagógica específica.</p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            st.markdown("""
+            <div class="metric-card">
+                <h3>📋 Relatórios Detalhados</h3>
+                <p>Visualizações interativas que apoiam o planejamento e a tomada de decisões pedagógicas.</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        # Seção da missão
+        st.markdown("""
+        <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 2rem; border-radius: 10px; margin-top: 2rem; border-left: 4px solid #0ea5e9;">
+            <h3 style="color: #0c4a6e; margin-top: 0;">💡 Nossa Missão</h3>
+            <p style="color: #0369a1; margin-bottom: 0; font-size: 1.1rem; line-height: 1.6;">
+                Aproximar os dados da prática pedagógica, fortalecendo o trabalho coletivo de gestores, 
+                professores e equipes escolares, em prol da melhoria da aprendizagem de nossos estudantes.
+            </p>
         </div>
         """, unsafe_allow_html=True)
         
